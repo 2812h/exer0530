@@ -2,6 +2,6 @@ package com.javasm.factory;
 
 public class Login {
     public static void main(String[] args) {
-        System.out.println("Login完成");
+        System.out.println("Login完成.......");
     }
 }
