@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       https://www.springframework.org/schema/context/spring-context.xsd">
+<!--       全局自动注入: default-autowire="byName">-->
+
+
+<!--    scope:
+            prototype->多例
+            singleton->单例
+        懒加载：
+            lazy-init="true"
+-->
+<!--    <bean id="person" class="com.javasm.entity.Person" scope="prototype" lazy-init="true"></bean>-->
+<!--&lt;!&ndash;    静态工厂&ndash;&gt;-->
+<!--    <bean id="staticFactory" class="com.javasm.factory.CalendarStaticFactory" factory-method="getCalendar"></bean>-->
+<!--&lt;!&ndash;    实例工厂&ndash;&gt;-->
+<!--    <bean id="InstanceFactory" class="com.javasm.factory.CalendarInstanceFactory" ></bean>-->
+<!--    <bean id="Calendar" factory-bean="InstanceFactory" factory-method="getCalendar"></bean>-->
+<!--&lt;!&ndash;    内置工厂&ndash;&gt;-->
+<!--    <bean id="SpringFactory" class="com.javasm.factory.CalendarSpringFactory" ></bean>-->
+<!--&lt;!&ndash;    初始化和销毁&ndash;&gt;-->
+<!--    <bean id="productDao" class="com.javasm.dao.ProductDao" init-method="init" destroy-method="destroy"></bean>-->
+
+<!--<bean id="hero" class="com.javasm.entity.Hero">-->
+<!--    <property name="id" value="18"></property>-->
+<!--    <property name="name" value="碎星"></property>-->
+<!--    <property name="array">-->
+<!--        <array>-->
+<!--            <value>1</value>-->
+<!--            <value>2</value>-->
+<!--            <value>3</value>-->
+<!--        </array>-->
+<!--    </property>-->
+<!--    <property name="list">-->
+<!--        <list>-->
+<!--            <value>戈弗雷</value>-->
+<!--            <value>拉塔恩</value>-->
+<!--        </list>-->
+<!--    </property>-->
+<!--    <property name="set">-->
+<!--        <set>-->
+<!--            <value>孤儿路</value>-->
+<!--            <value>打野</value>-->
+<!--        </set>-->
+<!--    </property>-->
+<!--    <property name="map">-->
+<!--        <map>-->
+<!--            <entry key="上单" value="孤儿路"></entry>-->
+<!--            <entry key="只因" value="ji"></entry>-->
+<!--        </map>-->
+<!--    </property>-->
+<!--    <property name="properties">-->
+<!--        <props>-->
+<!--            <prop key="妮寇">阴</prop>-->
+<!--            <prop key="小丑">阴2</prop>-->
+<!--            <prop key="老鼠">阴3</prop>-->
+<!--        </props>-->
+<!--    </property>-->
+<!--    <property name="dog" ref="dog"></property>-->
+<!--    <property name="cat" ref="cat"></property>-->
+<!--</bean>-->
+
+
+<!--    <bean id="dog" class="com.javasm.entity.Dog">-->
+<!--        <property name="dogName" value="狗"></property>-->
+<!--        <property name="age" value="4"></property>-->
+<!--    </bean>-->
+<!--    <bean id="cat" class="com.javasm.entity.Cat">-->
+<!--        <property name="catName" value="猫"></property>-->
+<!--        <property name="age" value="3"></property>-->
+<!--    </bean>-->
+<!--&lt;!&ndash; 自动注入:-->
+<!--    <bean id="hero" class="com.javasm.entity.Hero" autowire="byName"></bean>&ndash;&gt;-->
+<!--    <bean id="student" class="com.javasm.entity.Student">-->
+<!--        <constructor-arg index="0" value="10"></constructor-arg>-->
+<!--        <constructor-arg index="1" name="name" value="小明" type="java.lang.String"></constructor-arg>-->
+<!--        <constructor-arg index="2" ref="game"></constructor-arg>-->
+<!--    </bean>-->
+<!--    <bean id="game" class="com.javasm.entity.Game">-->
+<!--        <property name="name" value="GTA"></property>-->
+<!--     </bean>-->
+    
+<!--注解-->
+    <context:component-scan base-package="com.javasm.entity"></context:component-scan>
+<!--    引入外部文件-->
+
+</beans>
